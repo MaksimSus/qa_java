@@ -27,4 +27,6 @@ hs_err_pid*
 *.iml
 
 # Maven
-target/
+target/*
+!target/site/
+!target/site/jacoco/
