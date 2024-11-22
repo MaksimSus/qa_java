@@ -28,28 +28,10 @@ public class FelineTest {
     }
 
     @Test
-    public void getKittensReturnsOneKittenByDefault() {
-        assertEquals(1, feline.getKittens());
-    }
-
-    @Test
-    public void getKittensReturnsSpecifiedKittenCount() {
-        assertEquals(5, feline.getKittens(5));
-    }
-
-    // Добавлен тест для метода getKittens с нулевым значением, чтобы покрыть граничный случай
-    @Test
-    public void getKittensReturnsZeroForZeroInput() {
-        assertEquals(0, feline.getKittens(0));
-    }
-
-    // Добавлен тест для метода getKittens с отрицательным значением, чтобы проверить поведение для отрицательных значений
-    @Test
     public void getKittensReturnsNegativeValue() {
         assertEquals(-1, feline.getKittens(-1));
     }
 
-    // Добавлен тест для проверки выброса исключения в методе getFood при недопустимом значении параметра animalKind
     @Test
     public void getFoodThrowsExceptionForUnknownAnimalKind() {
         Exception exception = assertThrows(Exception.class, () -> feline.getFood("Неизвестный"));

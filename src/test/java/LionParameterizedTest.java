@@ -39,11 +39,4 @@ public class LionParameterizedTest {
         Lion lion = new Lion(sex, feline);
         assertEquals(expectedHasMane, lion.doesHaveMane());
     }
-
-
-    @Test
-    public void invalidSexThrowsException() {
-        Exception exception = assertThrows(Exception.class, () -> new Lion("InvalidSex", feline));
-        assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
-    }
 }

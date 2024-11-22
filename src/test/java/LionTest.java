@@ -45,7 +45,6 @@ public class LionTest {
         assertEquals(List.of("Животные", "Птицы", "Рыба"), lion.getFood());
     }
 
-
     @Test
     public void shouldThrowExceptionForInvalidSex() {
         Exception exception = assertThrows(Exception.class, () -> new Lion("Неизвестно", feline));
