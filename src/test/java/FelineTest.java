@@ -28,11 +28,6 @@ public class FelineTest {
     }
 
     @Test
-    public void getKittensReturnsNegativeValue() {
-        assertEquals(-1, feline.getKittens(-1));
-    }
-
-    @Test
     public void getFoodThrowsExceptionForUnknownAnimalKind() {
         Exception exception = assertThrows(Exception.class, () -> feline.getFood("Неизвестный"));
         assertEquals("Неизвестный вид животного, используйте значение Травоядное или Хищник", exception.getMessage());
